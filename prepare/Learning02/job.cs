@@ -5,7 +5,7 @@ public class Job
     public string _company;
     public string _jobTitle;
     public string _startYear;
-    public string _end _endYear;
-    
+    public string _endYear;
+
 }
 
