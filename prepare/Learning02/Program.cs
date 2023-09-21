@@ -17,6 +17,7 @@ class Program
         job2._endYear = "2021";
 
         Resume myResume = new Resume();
+        myResume._name = "Emma Hilmo";
 
         myResume._jobs.Add(job1);
         myResume._jobs.Add(job2);
