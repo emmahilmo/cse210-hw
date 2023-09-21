@@ -15,5 +15,10 @@ class Program
         job2._jobTitle = "Second Chair";
         job2._startYear = "2018";
         job2._endYear = "2021";
+
+        Resume myResume = new Resume();
+
+        myResume._jobs.Add(job1);
+        myResume._jobs.Add(job2);
     }
 }
