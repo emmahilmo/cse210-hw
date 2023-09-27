@@ -1,7 +1,7 @@
 public class Prompt
 {
-    List<string> _prompt = new List<string>();
-    public string RandomPrompt()
+    public List<string> _prompt;
+    public string GetRandomPrompt()
     {
         _prompt.Add("Who was the most interesting person I interacted with today?");
         _prompt.Add("What was the best part of my day?");
