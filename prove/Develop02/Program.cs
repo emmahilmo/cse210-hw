@@ -1,16 +1,16 @@
 using System;
-using System.Xml.Serialization;
+using System.Collections.Generic;
+using System.IO;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Journal theJournal = new Journal();
-        
+        Journal myJournal = new Journal();
+        myJournal._entries = new List<Entry>();
+
         Console.WriteLine("Welcome to the Journal Program");
 
-        Random randomGenerator = new Random();
-        int number = randomGenerator.Next(1, 10);
         int choice = -1;
 
         while(choice != 5)
@@ -23,19 +23,50 @@ class Program
             Console.WriteLine("5. Quit");
            
             string userinput = Console.ReadLine();
-            userNumber = int.Parse(userinput);
+            //userNumber = int.Parse(userinput);
 
             if(choice == 1)
             {
+                Entry newEntry = new Entry();
 
+                DateTime theCurrentTime = DateTime.Now;
+                string dateText = theCurrentTime.ToShortDateString();
+
+                Prompt prompt = new Prompt();
+
+                newEntry._promptText = prompt.GetRandomPrompt();
+                Console.WriteLine(newEntry._promptText);
+                newEntry._entryText = Console.ReadLine();
+
+                myJournal.AddEntry(newEntry);
             }
-        }
+            else if(choice == 2)
+            {
+                myJournal.DisplayAll();
+            }
+            else if(choice == 3)
+            {
+                Console.Write("What is the file name: ");
+                string fileName = Console.ReadLine();
 
+                myJournal.LoadFromFile(fileName);
+            }
+            else if (choice == 4)
+            {
+                Console.Write("Enter a file name: ");
+                string fileName = Console.ReadLine();
+
+                myJournal.SaveToFile(fileName);
+            }
+            else
+            {
+                Console.WriteLine("Thank you for using the Journal Program. We hope to see you again!");
+            }
         
-    }
+        }
     
+    }
 }
-
 
 
 //Write a new entry - Show the user a random prompt (from a list that you create), 
