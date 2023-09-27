@@ -5,6 +5,8 @@ class Program
 {
     static void Main(string[] args)
     {
+        Journal theJournal = new Journal();
+        
         Console.WriteLine("Welcome to the Journal Program");
 
         Random randomGenerator = new Random();
