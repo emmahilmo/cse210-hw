@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Enumeration;
 
 public class Journal
 {
@@ -22,7 +23,7 @@ public class Journal
         {
             Console.WriteLine("Saving File.......");
         
-            string filename = "entry.txt";
+            string filename = "";
 
             using (StreamWriter outputFile = new StreamWriter(filename))
                 {
