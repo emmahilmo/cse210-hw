@@ -4,18 +4,34 @@ using System.IO;
 
 public class Journal
 {
-    public List<Entry>_entries = new List<Entry>();
-    public void addEntry(Entry new Entry) 
+    public List<Entry>_entries;
+    public void AddEntry(Entry newEntry) 
     {
         _entries.Add(newEntry);
     }
 
-public class Entry
-{
-}
+    public void DisplayAll()
+        {
+            foreach (Entry entry in _entries)
+            {
+                entry.Display();
+            }
+        }
 
-public void DisplayAll()
-    {
-        foreach (Entry)
+        public void SaveToFile(string file)
+        {
+            Console.WriteLine("Saving File.......");
+        }
+
+        public void LoadFromFile(string file)
+        {
+            foreach (Entry entries in _entries)
+            {
+                Console.WriteLine($"{entries.date},{entries.PromptText},{entries.EntryText}");  
+            }
+        }
+
+
     }
-}
+
+
