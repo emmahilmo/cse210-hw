@@ -1,4 +1,4 @@
-public class JournalEntry
+public class Entry
 {
    public string _date;
    public string _promptText;
