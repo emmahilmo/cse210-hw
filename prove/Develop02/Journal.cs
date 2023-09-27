@@ -5,7 +5,7 @@ using System.IO;
 public class Journal
 {
     public List<Entry>_entries;
-    public void AddEntry(Entry newEntry) 
+    public void AddEntry(Entry newEntry)
     {
         _entries.Add(newEntry);
     }
@@ -21,17 +21,24 @@ public class Journal
         public void SaveToFile(string file)
         {
             Console.WriteLine("Saving File.......");
+        
+            string filename = "entry.txt";
+
+            using (StreamWriter outputFile = new StreamWriter(filename))
+                {
+                    foreach (Entry entries in _entries)
+                    {
+                        outputFile.WriteLine($"{entries._date}");
+                        outputFile.WriteLine($"{entries._promptText}");
+                        outputFile.WriteLine($"{entries._entryText}");
+                    }
+                }
         }
 
         public void LoadFromFile(string file)
         {
-            foreach (Entry entries in _entries)
-            {
-                Console.WriteLine($"{entries.date},{entries.PromptText},{entries.EntryText}");  
-            }
         }
 
-
-    }
+}
 
 
