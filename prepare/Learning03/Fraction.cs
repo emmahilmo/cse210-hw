@@ -1,4 +1,5 @@
 using System;
+using System.Dynamic;
 
 public class Fraction{
     private int _top;
@@ -14,5 +15,14 @@ public class Fraction{
     public Fraction(int top, int bottom) {
         _top = top;
         _bottom = bottom;
+    }
+    public string GetFractionString() {
+
+        string text = $"{_top}/{_bottom}";
+        return text;
+    }
+    public double GetDecimalValue() {
+
+        return (double)_top/(double)_bottom;
     }
 }
