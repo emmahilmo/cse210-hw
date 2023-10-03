@@ -10,4 +10,16 @@ public class Word {
     public void SetWord(string text) {
         _text = text;
     }
+    public void Hide() {
+        _hidden = true;
+    }
+    public void Show() {
+        _hidden = false;
+    }
+    public bool Hidden () {
+        return _hidden;
+    }
+    public string GetWord() {
+        return $"{_text} ";
+    }
 }
