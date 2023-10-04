@@ -20,7 +20,7 @@ public class Word {
         return _hidden;
     }
     public string GetWord() {
-        string text = $"{_text}";
+        string text = $"{_text} ";
         return text;
     }
 }
