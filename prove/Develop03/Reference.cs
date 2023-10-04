@@ -27,7 +27,7 @@ public class Reference {
         _startVerse = verse;
         _endVerse = endVerse;
     }
-    public string GetReferenceString(string book, int chapter, int verse, int endVerse) {
+    public string GetReference() {
         string reference = $"{_book} {_chapter} {_startVerse} {_endVerse}";
         return reference;
     }
