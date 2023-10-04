@@ -19,10 +19,11 @@ class Program
             scripture.HideRandomWord(number);
             Console.Clear();
             
-            if (userinput != "quit") {
-            Console.WriteLine(reference.GetReference());
-            Console.WriteLine(scripture.Display());
-            Console.WriteLine("Press 'enter' to continue or type 'quit' to end:");
+            if (userinput == "quit") {
+                Console.WriteLine(reference.GetReference());
+                Console.WriteLine(scripture.Display());
+                Console.WriteLine("Press 'enter' to continue or type 'quit' to end:");
+                userinput = Console.ReadLine();
             }
         }
     }
