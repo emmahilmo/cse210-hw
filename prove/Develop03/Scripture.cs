@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 
 public class Scripture {
     Reference _reference;
@@ -18,5 +19,26 @@ public class Scripture {
     }
     public void HideRandomWord(int numberHide) {
         _words[numberHide].Hide();
+    }
+    public string Display() {
+
+        var builder = new StringBuilder();
+        foreach (Word word in _words) {
+            if (word.Hidden() == true) {
+                string word1 = word.GetWord();
+                string space = "";
+                int number = word1.Length;
+                for (int i = 1; i < number; i++) {
+                    space += "_";
+                }
+                word.SetWord(space);
+                builder.Append(word.GetWord());
+            }
+            else {
+                builder.Append(word.GetWord());
+            }
+        }
+        string scripture = builder.ToString();
+        return scripture;
     }
 }
