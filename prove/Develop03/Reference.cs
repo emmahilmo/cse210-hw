@@ -28,7 +28,7 @@ public class Reference {
         _endVerse = endVerse;
     }
     public string GetReference() {
-        string reference = $"{_book} {_chapter} {_startVerse} {_endVerse}";
+        string reference = $"{_book} {_chapter} : {_startVerse} - {_endVerse}";
         return reference;
     }
 }
