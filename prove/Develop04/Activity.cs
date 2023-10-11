@@ -60,6 +60,6 @@ public class Activity {
         }
     }
     public void Pause() {
-        ShowSpinner(3);
+        ShowSpinner(5);
     }
 }
