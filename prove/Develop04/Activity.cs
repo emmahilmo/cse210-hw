@@ -47,7 +47,7 @@ public class Activity {
             Thread.Sleep(250);
             Console.Write("\b \b");
 
-            seconds -= -1;
+            seconds = -1;
         }
     }
     public void ShowCountDown(int seconds) {
