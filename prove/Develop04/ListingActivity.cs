@@ -33,6 +33,7 @@ public class ListingActivity : Activity {
     public void Run() {
         DisplayStartingMessage();
         SetDuration(int.Parse(Console.ReadLine()));
+        Console.Clear();
         Console.WriteLine($"Get Ready...");
         Pause();
         Console.WriteLine("List as many responses you can to the following prompt:");
