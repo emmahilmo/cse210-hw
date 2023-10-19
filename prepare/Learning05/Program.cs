@@ -8,18 +8,25 @@ class Program
         List<Shape> shapes = new List<Shape>();
 
         Square s1 = new Square("yellow", 2);
-        
-        Console.WriteLine(s1.GetColor());
-        Console.WriteLine(s1.GetArea());
+        shapes.Add(s1);
+        // Console.WriteLine(s1.GetColor());
+        // Console.WriteLine(s1.GetArea());
 
         Rectangle s2 = new Rectangle("Purple", 3, 2);
-        Console.WriteLine(s2.GetColor());
-        Console.WriteLine(s2.GetArea());
+        shapes.Add(s2);
+        // Console.WriteLine(s2.GetColor());
+        // Console.WriteLine(s2.GetArea());
 
         Circle s3 = new Circle("Blue", 2);
-        Console.WriteLine(s3.GetColor());
-        Console.WriteLine(s3.GetArea());
+        shapes.Add(s3);
+        // Console.WriteLine(s3.GetColor());
+        // Console.WriteLine(s3.GetArea());
 
-        // Console.WriteLine($"The {color} shape has the area of {area}");
+        foreach(Shape s in shapes) {
+            string color = s.GetColor();
+            double area = s.GetArea();
+        
+            Console.WriteLine($"The {color} shape has the area of {area}.");
+        }
     }
 }
