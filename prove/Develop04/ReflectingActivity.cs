@@ -1,7 +1,7 @@
 using System;
 public class ReflectingActivity : Activity {
-    private List<string> _questions;
-    private List<string> _prompts;
+    private List<string> _questions = new List<string>();
+    private List<string> _prompts = new List<string>();
     public ReflectingActivity(string name, string description) : base(name, description) {
     }
     private string GetRandomPrompt() {
@@ -53,13 +53,23 @@ public class ReflectingActivity : Activity {
         Console.WriteLine("When you have something in mind, press enter to continue.");
     }
     public void DisplayQuestion() {
+        Console.WriteLine("Now ponder on each of the following questions as they relate to this experience.");
+        Console.WriteLine($"You may begin in: ");
+        ShowCountDown(5);
         Console.Clear();
         int seconds = GetDuration();
-        DateTime startTime = DateTime.Now;
-        DateTime futureTime = startTime.AddSeconds(seconds);
-        while(DateTime.Now < futureTime) {
-            GetRandomQuestions();
-            Pause();
+    
+        while(seconds > 0) {
+             int setCount;
+            if (seconds < 5)
+                    {
+                        setCount = seconds;
+                    }
+            else {setCount = 5;} 
+            Console.Write($"{GetRandomQuestions()} ");
+            ShowCountDown(setCount);
+
+            seconds -= 5;
         }
     }
     public void Run() {
@@ -72,11 +82,9 @@ public class ReflectingActivity : Activity {
         SetQuestions();
         DisplayPrompt();
         if (Console.ReadKey().Key == ConsoleKey.Enter) {
-            Console.WriteLine("Now ponder on each of the following questions as they relate to this experience.");
-            Console.WriteLine($"You may begin in: ");
-            ShowCountDown(5);
             DisplayQuestion();
         }
         DisplayEndingMessage();
+        Pause();
     }
 }
