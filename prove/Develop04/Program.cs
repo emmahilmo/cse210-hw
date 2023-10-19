@@ -27,18 +27,18 @@ class Program
                 }
                 case 2: {
                     Console.Clear();
-                    // string name = "Reflecting Activity";
-                    // string description = "This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.";
-                    // ReflectingActivity reflectingActivity = new ReflectingActivity(name, description);
-                    // reflectingActivity.Run();
+                    string name = "Reflecting Activity";
+                    string description = "This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.";
+                    ReflectingActivity reflectingActivity = new ReflectingActivity(name, description);
+                    reflectingActivity.Run();
 
                     break;
                 }
                 case 3: {
-                    // string name = "Listing Activity";
-                    // string description = "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.";
-                    // ListingActivity listingActivity = new ListingActivity(name, description, duration, count, prompts);
-                    // listingActivity.Run();
+                    string name = "Listing Activity";
+                    string description = "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.";
+                    ListingActivity listingActivity = new ListingActivity(name, description);
+                    listingActivity.Run();
 
                     break;
                 }
