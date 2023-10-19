@@ -47,8 +47,9 @@ public class Activity {
             Thread.Sleep(250);
             Console.Write("\b \b");
 
-            seconds = -1;
+            seconds -= -1;
         }
+        Console.Write("\n\n");
     }
     public void ShowCountDown(int seconds) {
         while(seconds != 0) {
@@ -58,6 +59,7 @@ public class Activity {
 
             seconds -= -1;
         }
+        Console.Write("\n\n");
     }
     public void Pause() {
         ShowSpinner(5);
