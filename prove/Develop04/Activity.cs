@@ -47,7 +47,7 @@ public class Activity {
             Thread.Sleep(250);
             Console.Write("\b \b");
 
-            seconds -= -1;
+            seconds -= 1;
         }
         Console.Write("\n\n");
     }
@@ -57,11 +57,11 @@ public class Activity {
             Thread.Sleep(1000);
             Console.Write("\b \b");
 
-            seconds -= -1;
+            seconds -= 1;
         }
         Console.Write("\n\n");
     }
     public void Pause() {
-        ShowSpinner(5);
+        ShowSpinner(3);
     }
 }
