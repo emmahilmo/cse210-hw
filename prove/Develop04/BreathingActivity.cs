@@ -36,6 +36,7 @@ public class BreathingActivity : Activity {
     public void Run() {
         DisplayStartingMessage();
         SetDuration(int.Parse(Console.ReadLine()));
+        Console.Clear();
         Console.WriteLine($"Get Ready...");
         Pause();
         Breaths();
