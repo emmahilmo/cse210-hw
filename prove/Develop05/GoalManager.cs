@@ -71,7 +71,7 @@ public class GoalManager {
                 int points = int.Parse(Console.ReadLine());
                 Console.Write("What bonus would you like to add? ");
                 int bonus = int.Parse(Console.ReadLine());
-                Console.Write("How many time would you like to complete this goal? ");
+                Console.Write("How many times would you like to complete this goal? ");
                 int target = int.Parse(Console.ReadLine());
 
                 ChecklistGoal checklistGoal = new ChecklistGoal(name, description, points, bonus, target);
