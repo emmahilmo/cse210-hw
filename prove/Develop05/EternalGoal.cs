@@ -3,7 +3,7 @@ public class EternalGoal : Goal {
     public EternalGoal(string name, string description, int points) : base(name, description, points) {
     }
     public override void RecordEvent() {
-        
+
     }
      public override bool IsComplete()
     {
@@ -13,6 +13,6 @@ public class EternalGoal : Goal {
         
     }
     public override string GetStringRepresentation() {
-        return $"EternalGoal: {GetName()}, {GetDescription()}, {GetPoints()}, {IsComplete()}";
+        return $"EternalGoal, {GetName()}, {GetDescription()}, {GetPoints()}, {IsComplete()}";
     }
 }
