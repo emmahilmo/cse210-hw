@@ -4,11 +4,12 @@ class Program
 {
     static void Main(string[] args)
     {
-        GoalManager goalManager = new GoalManager();
-        
+        GoalManager goalManager = new GoalManager(0);
+
         int selection = -1;
         while(selection != 6) {
             Console.Clear();
+            goalManager.DisplayScore();
             Console.WriteLine("Menu Options:");
             Console.WriteLine("1. Create New Goal");
             Console.WriteLine("2. List Goals");
@@ -34,16 +35,23 @@ class Program
                 case 3: {
                     // save goals
                     Console.Clear();
+                    Console.WriteLine("What is the name of the file?");
+                    string fileName = Console.ReadLine();
+                    goalManager.SaveGoals(fileName);
                     break;
                 }
                 case 4: {
                     // load goals
                     Console.Clear();
+                    Console.WriteLine("What is the name of the file you are loading?");
+                    string fileName = Console.ReadLine();
+                    goalManager.LoadGoals(fileName);
                     break;
                 }
                 case 5: {
                     // record event
                     Console.Clear();
+                    goalManager.RecordEvent();
                     break;
                 }
             }
