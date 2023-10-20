@@ -20,27 +20,27 @@ class Program
             switch(selection) {
                 case 1: {
                     // create new goal
-
+                    Console.Clear();
                     break;
                 }
                 case 2: {
                     // list goals
-
+                    Console.Clear();
                     break;
                 }
                 case 3: {
                     // save goals
-
+                    Console.Clear();
                     break;
                 }
                 case 4: {
                     // load goals
-
+                    Console.Clear();
                     break;
                 }
                 case 5: {
                     // record event
-                    
+                    Console.Clear();
                     break;
                 }
             }
