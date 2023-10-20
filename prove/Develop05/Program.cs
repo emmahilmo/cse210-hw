@@ -4,6 +4,8 @@ class Program
 {
     static void Main(string[] args)
     {
+        GoalManager goalManager = new GoalManager();
+        
         int selection = -1;
         while(selection != 6) {
             Console.Clear();
@@ -14,13 +16,14 @@ class Program
             Console.WriteLine("4. Load Goals");
             Console.WriteLine("5. Record Event");
             Console.WriteLine("6. Quit");
-            Console.WriteLine("Select a choice from the menu: ");
+            Console.Write("Select a choice from the menu: ");
             selection = int.Parse(Console.ReadLine());
 
             switch(selection) {
                 case 1: {
                     // create new goal
                     Console.Clear();
+                    goalManager.CreateGoal();
                     break;
                 }
                 case 2: {
