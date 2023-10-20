@@ -29,7 +29,7 @@ public abstract class Goal {
     public abstract void RecordEvent();
     public abstract bool IsComplete();
     public abstract void SetComplete(bool value);
-    public string GetStringDetails() {
+    public virtual string GetStringDetails() {
         string status = "[ ]";
 
         if(IsComplete() == true ) {
