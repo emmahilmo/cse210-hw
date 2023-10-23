@@ -6,8 +6,8 @@ public class Video {
     public List<Comments>_comments = new List<Comments>();
     
     public void Display() {
-        Console.WriteLine($"{_title} - {_author} - {_length}(in seconds)");
-        Console.WriteLine($"Comment: {_comments}");
+        Console.WriteLine($"{_title} - {_author} - {_length} seconds");
+        Console.WriteLine($"Comment Section: {_comments}");
 
         foreach(Comments comments in _comments) {
             comments.Display();
