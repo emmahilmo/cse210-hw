@@ -7,4 +7,10 @@ public class OutdoorGathering : Event {
     public string GetWeather() {
         return $"Weather Forcast: {_weather}";
     }
+    public override string GetFullDetails() {
+        return $"{GetDetails()} {GetWeather()}";
+    }
+    public override string ShortDetails() {
+        return $"Outdoor Gathering \n {GetTitle()} \n {GetDate()}";
+    }
 }
