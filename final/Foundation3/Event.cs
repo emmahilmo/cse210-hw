@@ -13,19 +13,19 @@ public class Event {
         _address = address;
     }
     public string GetTitle() {
-        return $"Event: {_eventTitle} \n";
-    }
-    public string GetDescription() {
-        return $"Description: {_description} \n";
+        return _eventTitle;
     }
     public string GetDate() {
-        return $"Date: {_date} \n";
+        return _date;
     }
-    public string GetTime() {
-        return $"Time: {_time} \n";
+    public string GetDetails() {
+        return $"Event: {_eventTitle} \n Description: {_description} \n Date: {_date} \n Time: {_time} \n {_address.GetAddress()}";
     }
-    public string GetAddress() {
-        return _address.GetAddress();
+    public virtual string GetFullDetails() {
+        return "";
+    }
+    public virtual string ShortDetails() {
+        return "";
     }
 
 }
