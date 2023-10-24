@@ -1,20 +1,19 @@
 using System;
 public class Customer {
     private string _name;
-    private int _shipping;
-    Address GetAddress;
-    public Customer(string name) {
+    
+    Address _address;
+    public Customer(string name, Address address) {
         _name = name;
+        _address = address;
     }
-    public void isUSACustomer() {
-        if(GetAddress.isInUSA() == true) {
-            _shipping = 5;
-        }
-        else {
-            _shipping = 35;
-        }
+    public string GetName() {
+        return _name;
     }
-    public string GetCustomer() {
-        return $"{_name} {GetAddress}";
+    public string GetAddress() {
+        return _address.GetAddress();
+    }
+    public bool isUSACustomer() {
+       return _address.isInUSA();
     }
 }
