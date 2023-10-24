@@ -10,12 +10,8 @@ public class Address {
         _city = city;
         _stateProvence = stateProvence;
         _country = country;
-    }
-    public void inUSA() {
-        _USA = true;
-    }
-    public void isntUSA() {
-        _USA = false;
+        _USA = country == "USA";
+
     }
     public bool isInUSA() {
         return _USA;
