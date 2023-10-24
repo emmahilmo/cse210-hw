@@ -5,6 +5,6 @@ public class OutdoorGathering : Event {
         _weather = weather;
     }
     public string GetWeather() {
-        return _weather;
+        return $"Weather Forcast: {_weather}";
     }
 }
