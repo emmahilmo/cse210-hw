@@ -13,16 +13,16 @@ public class Event {
         _address = address;
     }
     public string GetTitle() {
-        return _eventTitle;
+        return $"Event: {_eventTitle} \n";
     }
     public string GetDescription() {
-        return _description;
+        return $"Description: {_description} \n";
     }
     public string GetDate() {
-        return _date;
+        return $"Date: {_date} \n";
     }
     public string GetTime() {
-        return _time;
+        return $"Time: {_time} \n";
     }
     public string GetAddress() {
         return _address.GetAddress();
