@@ -5,6 +5,6 @@ public class Reception : Event {
         _RSVP = RSVP;
     }
     public string GetRSVP() {
-        return _RSVP;
+        return $"RSVP at this number: {_RSVP}";
     }
 }
