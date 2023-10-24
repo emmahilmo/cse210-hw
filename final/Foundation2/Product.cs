@@ -10,10 +10,13 @@ public class Product {
         _price = price;
         _quantity = quantity;
     }
-    public string computePrice() { 
-        return $"{_price}*{_quantity}";
+    public string GetName() {
+        return _name;
     }
-    public string GetProduct() {
-        return $"{_name} {_id}";
+    public int GetId() {
+        return _id;
+    }
+    public float computePrice() { 
+        return _price*_quantity;
     }
 }
