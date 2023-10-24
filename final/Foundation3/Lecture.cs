@@ -12,4 +12,11 @@ public class Lecture : Event {
     public string GetSpeaker() {
         return $"Speaker: {_speaker}";
     }
+    public override string GetFullDetails() {
+        return $"{GetDetails()} {GetCapacity()} {GetSpeaker()}";
+    }
+    public override string ShortDetails() {
+        return $"Lecture \n {GetTitle()} \n {GetDate()}";
+    }
+
 }
