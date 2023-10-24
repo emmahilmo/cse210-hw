@@ -10,6 +10,6 @@ public class Lecture : Event {
         return _capacity;
     }
     public string GetSpeaker() {
-        return _speaker;
+        return $"Speaker: {_speaker}";
     }
 }
