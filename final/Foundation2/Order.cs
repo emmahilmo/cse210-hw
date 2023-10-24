@@ -1,24 +1,32 @@
 using System;
 public class Order {
-    Customer GetCustomer;
-    Product GetProduct;
+    Customer _customer;
     private List<Product> _products = new List<Product>();
-    public Order(List<Product> products) {
+    public Order(Customer customer, List<Product> products) {
         _products = products;
-        foreach(Product product in _products) {
-            
-        }
+        _customer = customer;
     }
-    public void calculateTotalCost() {
-        
+    public float computeTotalPrice() {
+        float sum = 0;
+        for (int i = 0; i < _products.Count; i++){
+            sum += _products[i].computePrice();
+        }
+        if(_customer.isUSACustomer()) {
+            sum += 5;
+        }
+        else {
+            sum += 35;
+        }
+        return sum;
     }
     public string GetPackingLabel() {
-        return $"{GetProduct}";
+        string label = "";
+        for(int i = 0; i < _products.Count; i++) {
+            label += _products[i].GetName() + ", " + _products[i].GetId() + "\n";
+        }
+        return label;
     }
     public string GetShippingLabel() {
-        return $"{GetCustomer}";
-    }
-    public void Display() {
-        
+        return $"{_customer.GetName()} {_customer.GetAddress()}";
     }
 }
