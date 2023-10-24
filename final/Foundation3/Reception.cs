@@ -7,4 +7,11 @@ public class Reception : Event {
     public string GetRSVP() {
         return $"RSVP at this number: {_RSVP}";
     }
+    public override string GetFullDetails() {
+        return $"{GetDetails()} {GetRSVP()}";
+    }
+    public override string ShortDetails() {
+        return $"Reception \n {GetTitle()} \n {GetDate()}";
+    }
+
 }
